@@ -1,0 +1,27 @@
+{
+  "extends": ["stylelint-config-standard-scss"],
+  "rules": {
+    "color-no-invalid-hex": true,
+    "declaration-block-no-duplicate-properties": true,
+    "no-duplicate-selectors": true,
+    "selector-class-pattern": [
+      "^([a-z][a-z0-9]*)(-[a-z0-9]+)*(__[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?$",
+      {
+        "message": "Selector ha de seguir la convenció BEM (block__element--modifier)"
+      }
+    ],
+    "max-nesting-depth": 4,
+    "comment-empty-line-before": null,
+    "custom-property-empty-line-before": null,
+    "alpha-value-notation": null,
+    "color-function-notation": null,
+    "color-function-alias-notation": null,
+    "import-notation": null,
+    "rule-empty-line-before": null,
+    "at-rule-empty-line-before": null,
+    "scss/dollar-variable-colon-space-after": null,
+    "value-keyword-case": null,
+    "hue-degree-notation": null,
+    "scss/double-slash-comment-empty-line-before": null
+  }
+}

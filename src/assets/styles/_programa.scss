@@ -1,0 +1,191 @@
+// =============================================================================
+// LAYOUT: Pàgina Programa
+// =============================================================================
+
+@use "variables" as v;
+
+@layer base {
+  .programa-page {
+    min-height: 100svh;  // svh - nova unitat
+  }
+}
+
+@layer layout {
+  .programa-hero {
+    align-items: center;
+    background: oklch(30% 0.08 45);
+    color: v.$color-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 40svh;
+    padding: 5cqi v.$spacing-lg;
+    text-align: center;
+
+    &__title {
+      color: oklch(80% 0.12 75);
+      font-family: v.$font-family-display;
+      font-size: clamp(2rem, 5cqw, 3.5rem);
+      font-weight: 900;
+      margin-bottom: v.$spacing-sm;
+    }
+
+    &__subtitle {
+      color: oklch(90% 0.05 75 / 0.8);
+      font-style: italic;
+    }
+  }
+
+  .programa-section {
+    container-name: programa;
+    container-type: inline-size;
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: v.$spacing-xl v.$spacing-lg;
+  }
+
+  .programa-day {
+    margin-bottom: v.$spacing-xl;
+
+    &__header {
+      align-items: center;
+      background: oklch(95% 0.04 75);
+      border-radius: 0.5rem 0.5rem 0 0;
+      display: flex;
+      gap: v.$spacing-md;
+      padding: v.$spacing-md v.$spacing-lg;
+    }
+
+    &__date {
+      background: oklch(40% 0.1 45);
+      border-radius: 0.5rem;
+      color: v.$color-white;
+      font-family: v.$font-family-display;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: v.$spacing-xs v.$spacing-sm;
+      text-align: center;
+      text-transform: uppercase;
+
+      span {
+        display: block;
+        font-size: 1.5rem;
+      }
+    }
+
+    &__title {
+      color: oklch(35% 0.09 45);
+      font-family: v.$font-family-display;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    &__events {
+      border: 1px solid oklch(85% 0.06 75);
+      border-top: 0;
+      border-radius: 0 0 0.5rem 0.5rem;
+    }
+  }
+
+  .programa-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: v.$spacing-sm;
+    margin-bottom: v.$spacing-lg;
+  }
+
+  .programa-filter {
+    background-color: transparent;
+    border: 2px solid v.$color-secondary;
+    color: v.$color-primary;
+    cursor: pointer;
+    font-family: v.$font-family-sans;
+    font-size: v.$font-size-sm;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: v.$spacing-xs v.$spacing-md;
+    text-transform: uppercase;
+    transition: v.$transition-base;
+
+    &:hover,
+    &.active {
+      background-color: v.$color-secondary;
+      color: v.$color-dark;
+    }
+  }
+
+  .programa-stats {
+    display: grid;
+    gap: v.$spacing-md;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    margin-bottom: v.$spacing-xl;
+  }
+
+  .programa-stat {
+    background: oklch(97% 0.03 75);
+    border-radius: 0.5rem;
+    padding: v.$spacing-md;
+    text-align: center;
+
+    &__number {
+      color: oklch(40% 0.1 45);
+      display: block;
+      font-family: v.$font-family-display;
+      font-size: 2.5rem;
+      font-weight: 900;
+    }
+
+    &__label {
+      color: v.$color-muted;
+      font-size: v.$font-size-sm;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+
+  .programa-gallery {
+    display: grid;
+    gap: v.$spacing-sm;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-top: v.$spacing-xl;
+  }
+
+  .programa-gallery__item {
+    aspect-ratio: 4 / 3;
+    border-radius: 0.25rem;
+    object-fit: cover;
+    overflow: hidden;
+    position: relative;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      transition: v.$transition-slow;
+      width: 100%;
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+
+    &--large {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+  }
+}
+
+@container programa (max-width: 600px) {
+  .programa-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .programa-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .programa-gallery__item--large {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}

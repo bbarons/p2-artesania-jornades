@@ -1,0 +1,208 @@
+// =============================================================================
+// LAYOUT: Pàgina Article
+// =============================================================================
+
+@use "variables" as v;
+
+@layer base {
+  .article-page {
+    min-height: 100vh;
+  }
+
+  .article-hero {
+    background-color: v.$color-highlight;
+    padding: v.$spacing-xl v.$spacing-lg;
+    text-align: center;
+
+    &__category {
+      color: v.$color-accent;
+      font-family: v.$font-family-sans;
+      font-size: v.$font-size-sm;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    &__title {
+      color: v.$color-dark;
+      font-family: v.$font-family-display;
+      font-size: clamp(1.75rem, 4vw, 3rem);
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: v.$spacing-sm;
+    }
+
+    &__meta {
+      color: v.$color-muted;
+      font-size: v.$font-size-sm;
+    }
+
+    &__image {
+      border-radius: 0.5rem;
+      box-shadow: v.$shadow-lg;
+      margin: v.$spacing-lg auto 0;
+      max-height: 400px;
+      max-width: 800px;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}
+
+@layer layout {
+  .article-body {
+    container-name: article-body;
+    container-type: inline-size;
+    margin: 0 auto;
+    max-width: 780px;
+    padding: v.$spacing-xl v.$spacing-lg;
+  }
+
+  .article-intro {
+    display: grid;
+    gap: v.$spacing-lg;
+    grid-template-columns: 1fr 2fr;
+    margin-bottom: v.$spacing-xl;
+
+    @media (max-width: v.$bp-md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .article-intro__lead {
+    color: v.$color-primary;
+    font-family: v.$font-family-display;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .article-intro__text {
+    color: v.$color-dark;
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .article-content {
+    h2 {
+      color: v.$color-primary;
+      font-family: v.$font-family-display;
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: v.$spacing-md;
+      margin-top: v.$spacing-xl;
+    }
+
+    h3 {
+      color: v.$color-accent;
+      font-family: v.$font-family-display;
+      font-size: 1.2rem;
+      margin-top: v.$spacing-lg;
+    }
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      margin-bottom: v.$spacing-md;
+    }
+
+    p:has(+ figure) {
+      margin-bottom: v.$spacing-lg;
+    }
+    :is(h2, h3, h4) {
+      font-family: v.$font-family-display;
+    }
+
+    :where(ul, ol) {
+      margin-bottom: v.$spacing-md;
+      padding-left: v.$spacing-lg;
+    }
+
+    :where(ul) li {
+      margin-bottom: v.$spacing-xs;
+    }
+
+    :where(ol) li {
+      font-weight: 600;
+      margin-bottom: v.$spacing-sm;
+
+      p {
+        font-weight: 400;
+        margin-bottom: 0;
+        margin-top: v.$spacing-xs;
+      }
+    }
+  }
+
+  .article-blockquote {
+    background-color: v.$color-highlight;
+    border-left: 5px solid v.$color-secondary;
+    color: v.$color-primary;
+    font-family: v.$font-family-display;
+    font-size: 1.2rem;
+    font-style: italic;
+    margin: v.$spacing-xl 0;
+    padding: v.$spacing-lg v.$spacing-xl;
+    position: relative;
+
+    &::before {
+      color: v.$color-secondary;
+      content: "\201C";
+      font-size: 4rem;
+      left: v.$spacing-md;
+      line-height: 1;
+      opacity: 0.5;
+      position: absolute;
+      top: v.$spacing-sm;
+    }
+
+    cite {
+      color: v.$color-muted;
+      display: block;
+      font-size: v.$font-size-sm;
+      font-style: normal;
+      font-weight: 700;
+      margin-top: v.$spacing-sm;
+      text-transform: uppercase;
+    }
+  }
+
+  .article-figure {
+    margin: v.$spacing-xl 0;
+    text-align: center;
+
+    img {
+      border-radius: 0.5rem;
+      box-shadow: v.$shadow-md;
+      max-height: 500px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    figcaption {
+      color: v.$color-muted;
+      font-size: v.$font-size-sm;
+      font-style: italic;
+      margin-top: v.$spacing-sm;
+    }
+  }
+
+  .article-highlight-box {
+    background: linear-gradient(135deg, v.$color-primary 0%, v.$color-accent 100%);
+    border-radius: 0.5rem;
+    color: v.$color-white;
+    margin: v.$spacing-xl 0;
+    padding: v.$spacing-xl;
+
+    h3 {
+      color: v.$color-secondary;
+      font-family: v.$font-family-display;
+    }
+  }
+}
+
+@container article-body (max-width: 500px) {
+  .article-intro {
+    grid-template-columns: 1fr;
+  }
+}

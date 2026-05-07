@@ -1,0 +1,41 @@
+{
+  "name": "artesania-jornades",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Jornades d'Artesania Barcelona 2026 - PAC2 HTML i CSS Tools II",
+  "scripts": {
+    "parcel:serve": "parcel src/index.html src/ponents.html src/sobre.html src/programa.html -p 8123 --dist-dir dist",
+    "parcel:build": "parcel build src/index.html src/ponents.html src/sobre.html src/programa.html --dist-dir dist --no-source-maps --no-cache",
+    "clean": "rimraf dist .cache .cache-loader .parcel-cache",
+    "dev": "npm-run-all clean parcel:serve",
+    "build": "npm-run-all clean parcel:build",
+    "lint": "stylelint \"src/assets/styles/**/*.scss\"",
+    "test": "echo 'Everything is working as expected'"
+  },
+  "targets": {
+    "default": {
+      "context": "browser",
+      "publicUrl": "./",
+      "engines": {
+        "browsers": "last 2 versions, > 0.5%, not dead"
+      }
+    }
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.16.3",
+    "autoprefixer": "^10.4.24",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.16.3",
+    "postcss-preset-env": "^11.1.2",
+    "posthtml-include": "^2.0.1",
+    "rimraf": "^6.1.2",
+    "sharp": "^0.33.5"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.2.0",
+    "bootstrap": "^5.3.8",
+    "stylelint": "^17.9.1",
+    "stylelint-config-standard-scss": "^17.0.0",
+    "stylelint-scss": "^7.0.0"
+  }
+}

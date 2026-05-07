@@ -1,0 +1,81 @@
+// =============================================================================
+// MAIN.SCSS 
+// =============================================================================
+
+$primary:           #5c3d2e;
+$secondary:         #d4a574;
+$body-bg:           #fdf8f3;
+$body-color:        #2c1810;
+$font-family-base:  "Crimson Text", Georgia, serif;
+$headings-font-family: "Playfair Display", Georgia, serif;
+$border-radius:     0.25rem;
+$card-border-radius: 0.5rem;
+$btn-border-radius: 0;
+$navbar-light-color: #5c3d2e;
+$navbar-light-active-color: #8b4513;
+$navbar-light-hover-color: #8b4513;
+
+@use "dependencies";
+
+@use "variables" as v;
+
+@use "components/navbar";
+@use "components/footer";
+@use "cards";
+
+@use "layouts/home";
+@use "article";
+@use "programa";
+
+@layer components {
+  // Speakers page hero
+  .speakers-hero {
+    background-color: v.$color-highlight;
+    padding: v.$spacing-xl v.$spacing-lg;
+    text-align: center;
+    container-type: inline-size;
+
+    &__title {
+      color: v.$color-primary;
+      font-family: v.$font-family-display;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 900;
+      margin-bottom: v.$spacing-sm;
+    }
+
+    &__subtitle {
+      color: v.$color-muted;
+      font-style: italic;
+    }
+  }
+
+  .speakers-section {
+    padding: v.$spacing-xl 0;
+  }
+
+  .speakers-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: v.$spacing-lg;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    container-type: inline-size;
+
+    &__item {
+      flex: 0 1 calc(33.333% - #{v.$spacing-lg});
+      min-width: 260px;
+      max-width: 340px;
+
+      @container (max-width: 900px) {
+        flex: 0 1 calc(50% - #{v.$spacing-md});
+      }
+
+      @container (max-width: 560px) {
+        flex: 0 1 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}

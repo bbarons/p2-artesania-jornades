@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ca">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
+    <title>Ponents — Jornades d'Artesania Barcelona 2026</title>
+    <meta name="description" content="Coneix els ponents de les Jornades d'Artesania Barcelona 2026." />
+  </head>
+  <body class="speakers-page">
+    <include src="./views/navbar.html"></include>
+
+    <!-- Hero -->
+    <section class="speakers-hero">
+      <h1 class="speakers-hero__title">Ponents</h1>
+      <p class="speakers-hero__subtitle">Experts i artesans de renom internacional</p>
+    </section>
+
+    <!-- Speakers grid (Flexbox — sense .row ni .col-*) -->
+    <section class="speakers-section">
+      <div class="container">
+        <!-- Bootstrap Toast com a missatge de benvinguda -->
+        <div class="toast show align-items-center border-0 mb-4" role="status" aria-live="polite" aria-atomic="true" style="background-color: #fdf0e0; border-left: 4px solid #d4a574 !important; max-width: 100%;">
+          <div class="d-flex">
+            <div class="toast-body" style="color: #5c3d2e;">
+              <i class="fas fa-info-circle me-2" aria-hidden="true" style="color: #8b4513;"></i>
+              <strong>6 ponents confirmats</strong> per a l'edició 2026. Properament s'anunciaran ponents addicionals.
+            </div>
+          </div>
+        </div>
+
+        <ul class="speakers-grid" aria-label="Llista de ponents">
+          <!-- Ponent 1 -->
+          <li class="speakers-grid__item">
+            <article class="speaker-card">
+              <div class="speaker-card__image-wrapper">
+                <img
+                  src="./assets/images/ponent-1.jpg"
+                  alt="Retrat de Maria Puig"
+                  class="speaker-card__image"
+                  width="400"
+                  height="400"
+                />
+              </div>
+              <div class="speaker-card__body">
+                <h2 class="speaker-card__name">Maria Puig Ferrer</h2>
+                <p class="speaker-card__specialty">
+                  <i class="fas fa-fire me-1" aria-hidden="true"></i>Ceràmica i foc
+                </p>
+                <p class="speaker-card__bio">
+                  Mestra ceramista amb més de 20 anys d'experiència. Especialitzada
+                  en tècniques de cocció Raku i ceràmica d'alta temperatura. Ha
+                  exposat a Paris, Tòquio i Nova York.
+                </p>
+              </div>
+            </article>
+          </li>
+
+          <!-- Ponent 2 -->
+          <li class="speakers-grid__item">
+            <article class="speaker-card">
+              <div class="speaker-card__image-wrapper">
+                <img
+                  src="./assets/images/ponent-2.jpg"
+                  alt="Retrat de Joan Vidal"
+                  class="speaker-card__image"
+                  width="400"
+                  height="400"
+                />
+              </div>
+              <div class="speaker-card__body">
+                <h2 class="speaker-card__name">Joan Vidal Martínez</h2>
+                <p class="speaker-card__specialty">
+                  <i class="fas fa-tree me-1" aria-hidden="true"></i>Fusteria artística
+                </p>
+                <p class="speaker-card__bio">
+                  Fuster i escultor en fusta. Treballa amb espècies autòctones
+                  catalanes usant tècniques tradicionals combinades amb eines
+                  modernes de precisió.
+                </p>
+              </div>
+            </article>
+          </li>
+
+          <!-- Ponent 3 -->
+          <li class="speakers-grid__item">
+            <article class="speaker-card">
+              <div class="speaker-card__image-wrapper">
+                <img
+                  src="./assets/images/ponent-3.jpg"
+                  alt="Retrat d'Anna Ros"
+                  class="speaker-card__image"
+                  width="400"
+                  height="400"
+                />
+              </div>
+              <div class="speaker-card__body">
+                <h2 class="speaker-card__name">Anna Ros Guillem</h2>
+                <p class="speaker-card__specialty">
+                  <i class="fas fa-tshirt me-1" aria-hidden="true"></i>Teixits i tintes naturals
+                </p>
+                <p class="speaker-card__bio">
+                  Dissenyadora tèxtil i investigadora. Pionera en l'ús de tintes
+                  naturals extretes de plantes mediterrànies. Professora a l'Escola
+                  Massana de Barcelona.
+                </p>
+              </div>
+            </article>
+          </li>
+
+          <!-- Ponent 4 -->
+          <li class="speakers-grid__item">
+            <article class="speaker-card">
+              <div class="speaker-card__image-wrapper">
+                <img
+                  src="./assets/images/ponent-4.jpg"
+                  alt="Retrat de Pere Camins"
+                  class="speaker-card__image"
+                  width="400"
+                  height="400"
+                />
+              </div>
+              <div class="speaker-card__body">
+                <h2 class="speaker-card__name">Pere Camins Roca</h2>
+                <p class="speaker-card__specialty">
+                  <i class="fas fa-gem me-1" aria-hidden="true"></i>Orfebreria i metall
+                </p>
+                <p class="speaker-card__bio">
+                  Orfebre de tercera generació. Especialista en filigrana d'or i
+                  plata. Premi Nacional d'Artesania 2019 atorgat per la Generalitat
+                  de Catalunya.
+                </p>
+              </div>
+            </article>
+          </li>
+
+          <!-- Ponent 5 -->
+          <li class="speakers-grid__item">
+            <article class="speaker-card">
+              <div class="speaker-card__image-wrapper">
+                <img
+                  src="./assets/images/ponent-5.jpg"
+                  alt="Retrat de Laia Bosch"
+                  class="speaker-card__image"
+                  width="400"
+                  height="400"
+                />
+              </div>
+              <div class="speaker-card__body">
+                <h2 class="speaker-card__name">Laia Bosch Torras</h2>
+                <p class="speaker-card__specialty">
+                  <i class="fas fa-leaf me-1" aria-hidden="true"></i>Cistelleria i vímet
+                </p>
+                <p class="speaker-card__bio">
+                  Artesana especialitzada en tècniques tradicionals de cistelleria.
+                  Ha recuperat i documentat tècniques gairebé desaparegudes de les
+                  comarques del delta de l'Ebre.
+                </p>
+              </div>
+            </article>
+          </li>
+
+          <!-- Ponent 6 -->
+          <li class="speakers-grid__item">
+            <article class="speaker-card">
+              <div class="speaker-card__image-wrapper">
+                <img
+                  src="./assets/images/ponent-6.jpg"
+                  alt="Retrat de Marc Font"
+                  class="speaker-card__image"
+                  width="400"
+                  height="400"
+                />
+              </div>
+              <div class="speaker-card__body">
+                <h2 class="speaker-card__name">Marc Font Alegre</h2>
+                <p class="speaker-card__specialty">
+                  <i class="fas fa-book me-1" aria-hidden="true"></i>Enquadernació artística
+                </p>
+                <p class="speaker-card__bio">
+                  Enquadernador i restaurador de llibres antics. Treballa per a
+                  biblioteques i col·leccions privades arreu d'Europa. Docentde
+                  la Fundació Tàpies.
+                </p>
+              </div>
+            </article>
+          </li>
+        </ul>
+
+        <p class="text-center mt-4" style="color: #7a6a5e; font-style: italic;">
+        </p>
+      </div>
+    </section>
+
+    <include src="./views/footer.html"></include>
+
+    <script type="module" src="./assets/scripts/main.js"></script>
+  </body>
+</html>

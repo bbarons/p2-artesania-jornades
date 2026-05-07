@@ -1,0 +1,82 @@
+// =============================================================================
+// COMPONENT: Footer
+// =============================================================================
+
+@use "../variables" as v;
+
+@layer components {
+  .site-footer {
+    background-color: v.$color-dark;
+    color: v.$color-highlight;
+    margin-top: auto;
+    padding: v.$spacing-xl v.$spacing-lg v.$spacing-lg;
+
+    &__brand {
+      color: v.$color-white;
+      font-family: v.$font-family-display;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: v.$spacing-sm;
+    }
+
+    &__tagline {
+      color: v.$color-secondary;
+      font-size: v.$font-size-sm;
+    }
+
+    &__heading {
+      color: v.$color-secondary;
+      font-family: v.$font-family-display;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin-bottom: v.$spacing-md;
+      text-transform: uppercase;
+    }
+
+    &__link {
+      color: v.$color-highlight !important;
+      display: block;
+      margin-bottom: v.$spacing-xs;
+      text-decoration: none;
+      transition: v.$transition-base;
+
+      &:hover {
+        color: v.$color-secondary !important;
+        padding-left: v.$spacing-xs;
+      }
+    }
+
+    &__social {
+      display: flex;
+      gap: v.$spacing-md;
+    }
+
+    &__social-link {
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: v.$color-white !important;
+      display: flex;
+      height: 2.5rem;
+      justify-content: center;
+      text-decoration: none;
+      transition: v.$transition-base;
+      width: 2.5rem;
+
+      &:hover {
+        background-color: v.$color-secondary;
+        color: v.$color-dark !important;
+      }
+    }
+
+    &__bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: v.$color-muted;
+      font-size: v.$font-size-sm;
+      margin-top: v.$spacing-lg;
+      padding-top: v.$spacing-md;
+      text-align: center;
+    }
+  }
+}

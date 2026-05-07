@@ -1,0 +1,117 @@
+// =============================================================================
+// COMPONENT:
+// =============================================================================
+
+@use "variables" as v;
+
+@layer components {
+  .speaker-card {
+    background-color: v.$color-white;
+    border: 1px solid rgba(212, 165, 116, 0.3);
+    border-radius: v.$card-border-radius;
+    box-shadow: v.$shadow-sm;
+    overflow: hidden;
+    transition: v.$transition-base;
+
+    &:hover {
+      box-shadow: v.$shadow-md;
+      transform: translateY(-4px);
+    }
+
+    &__image-wrapper {
+      aspect-ratio: 1;
+      background-color: v.$color-highlight;
+      overflow: hidden;
+      position: relative;
+    }
+
+    &__image {
+      height: 100% !important;
+      object-fit: cover;
+      transition: v.$transition-slow;
+      width: 100%;
+
+      .speaker-card:hover & {
+        transform: scale(1.05);
+      }
+    }
+
+    &__body {
+      padding: v.$spacing-md;
+    }
+
+    &__name {
+      color: v.$color-primary;
+      font-family: v.$font-family-display;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: v.$spacing-xs;
+    }
+
+    &__specialty {
+      color: v.$color-secondary;
+      font-family: v.$font-family-sans;
+      font-size: v.$font-size-sm;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      margin-bottom: v.$spacing-sm;
+      text-transform: uppercase;
+    }
+
+    &__bio {
+      color: v.$color-muted;
+      font-size: v.$font-size-sm;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+  }
+
+  .event-card {
+    background-color: v.$color-white;
+    border-left: 4px solid v.$color-secondary;
+    box-shadow: v.$shadow-sm;
+    margin-bottom: v.$spacing-md;
+    padding: v.$spacing-md v.$spacing-lg;
+    transition: v.$transition-base;
+
+    &:hover {
+      border-left-color: v.$color-primary;
+      box-shadow: v.$shadow-md;
+    }
+
+    &__time {
+      color: v.$color-secondary;
+      font-family: v.$font-family-sans;
+      font-size: v.$font-size-sm;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    &__title {
+      color: v.$color-primary;
+      font-family: v.$font-family-display;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: v.$spacing-xs;
+    }
+
+    &__speaker {
+      color: v.$color-muted;
+      font-size: v.$font-size-sm;
+
+      i {
+        margin-right: v.$spacing-xs;
+      }
+    }
+
+    &__type-badge {
+      border-radius: 0;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 0.2em 0.6em;
+      text-transform: uppercase;
+    }
+  }
+}

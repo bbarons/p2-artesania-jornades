@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ca">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
+    <title>Jornades d'Artesania Barcelona 2026 — Portada</title>
+    <meta name="description" content="Jornades d'Artesania Barcelona 2026. Tres dies de tallers, xerrades i exposicions dedicades a l'artesania tradicional i contemporània." />
+  </head>
+  <body>
+    <include src="./views/navbar.html"></include>
+    <div class="poster">
+      <!-- Àrea imatge esquerra -->
+      <div class="poster__image-area">
+        <img
+          src="./assets/images/portada-artesania.jpg"
+          alt="Artesà treballant ceràmica al torn"
+          width="800"
+          height="1200"
+        />
+      </div>
+
+      <!-- Àrea títol central -->
+      <main class="poster__title-area">
+        <p class="poster__event-label">
+          <i class="fas fa-calendar" aria-hidden="true"></i>
+          14 – 16 Novembre 2026
+        </p>
+        <h1 class="poster__title">
+          Jornades<br />
+          d'Artesania<br />
+          Barcelona
+        </h1>
+        <p class="poster__subtitle">
+          Tradició, creativitat i ofici artesanal
+        </p>
+      </main>
+
+      <!-- Descripció breu -->
+      <div class="poster__desc-area">
+        <p>
+          Tres dies d'immersió en el món de l'artesania. Xerrades de ponents
+          internacionals, tallers pràctics i una exposició col·lectiva al
+          Centre Cultural de la Vila de Barcelona.
+        </p>
+        <p>
+          Un espai per aprendre, compartir i celebrar els oficis artesanals
+          que formen part del nostre patrimoni cultural.
+        </p>
+
+        <!-- Bootstrap Badge component -->
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <span class="badge" style="background-color: #5c3d2e;">
+            <i class="fas fa-comments me-1" aria-hidden="true"></i>Xerrades
+          </span>
+          <span class="badge" style="background-color: #8b4513;">
+            <i class="fas fa-tools me-1" aria-hidden="true"></i>Tallers
+          </span>
+          <span class="badge" style="background-color: #d4a574; color: #2c1810;">
+            <i class="fas fa-palette me-1" aria-hidden="true"></i>Exposició
+          </span>
+          <span class="badge" style="background-color: #7a6a5e;">
+            <i class="fas fa-users me-1" aria-hidden="true"></i>Networking
+          </span>
+        </div>
+
+        <!-- Bootstrap Alert component -->
+        <div class="alert mt-3 p-2" style="background-color: #fdf0e0; border: 1px solid #d4a574; border-radius: 0.25rem;" role="alert">
+          <small>
+            <i class="fas fa-ticket-alt me-1" aria-hidden="true" style="color: #8b4513;"></i>
+            <strong>Inscripcions obertes</strong> — Places limitades
+          </small>
+        </div>
+      </div>
+    </div>
+
+    <include src="./views/footer.html"></include>
+
+    <script type="module" src="./assets/scripts/main.js"></script>
+  </body>
+</html>

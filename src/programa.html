@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="ca">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
+    <title>Programa — Jornades d'Artesania Barcelona 2026</title>
+    <meta name="description" content="Programa complet de les Jornades d'Artesania Barcelona 2026." />
+  </head>
+  <body class="programa-page">
+    <include src="./views/navbar.html"></include>
+
+    <!-- Hero -->
+    <header class="programa-hero">
+      <h1 class="programa-hero__title">Programa</h1>
+      <p class="programa-hero__subtitle">14, 15 i 16 de novembre de 2026</p>
+    </header>
+
+    <!-- Estadístiques -->
+    <section class="programa-section">
+      <div class="container">
+        <div class="programa-stats">
+          <div class="programa-stat">
+            <span class="programa-stat__number">3</span>
+            <span class="programa-stat__label">Dies</span>
+          </div>
+          <div class="programa-stat">
+            <span class="programa-stat__number">6</span>
+            <span class="programa-stat__label">Ponents</span>
+          </div>
+          <div class="programa-stat">
+            <span class="programa-stat__number">12</span>
+            <span class="programa-stat__label">Tallers</span>
+          </div>
+          <div class="programa-stat">
+            <span class="programa-stat__number">3</span>
+            <span class="programa-stat__label">Dies d'exposició</span>
+          </div>
+        </div>
+
+        <!-- Filtres -->
+        <div class="programa-filters" role="group" aria-label="Filtra per tipus d'activitat">
+          <button class="programa-filter active" type="button">Tots</button>
+          <button class="programa-filter" type="button">
+            <i class="fas fa-microphone me-1" aria-hidden="true"></i>Xerrades
+          </button>
+          <button class="programa-filter" type="button">
+            <i class="fas fa-tools me-1" aria-hidden="true"></i>Tallers
+          </button>
+          <button class="programa-filter" type="button">
+            <i class="fas fa-palette me-1" aria-hidden="true"></i>Exposicions
+          </button>
+        </div>
+
+        <!-- Dia 1 -->
+        <div class="programa-day">
+          <div class="programa-day__header">
+            <div class="programa-day__date">
+              Divendres
+              <span>14</span>
+            </div>
+            <h2 class="programa-day__title">Obertura i Tradició</h2>
+          </div>
+          <div class="programa-day__events">
+            <article class="event-card">
+              <p class="event-card__time">
+                <i class="fas fa-clock me-1" aria-hidden="true"></i>10:00 – 10:30
+              </p>
+              <h3 class="event-card__title">Acte inaugural</h3>
+              <p class="event-card__speaker">
+                <i class="fas fa-user me-1" aria-hidden="true"></i>
+                Comissió Organitzadora
+              </p>
+              <span class="event-card__type-badge badge" style="background-color: #5c3d2e;">Acte</span>
+            </article>
+
+            <article class="event-card">
+              <p class="event-card__time">
+                <i class="fas fa-clock me-1" aria-hidden="true"></i>11:00 – 12:30
+              </p>
+              <h3 class="event-card__title">Ceràmica catalana: arrels i futur</h3>
+              <p class="event-card__speaker">
+                <i class="fas fa-user me-1" aria-hidden="true"></i>
+                Maria Puig i Ferrer
+              </p>
+              <span class="event-card__type-badge badge" style="background-color: #8b4513;">Xerrada</span>
+            </article>
+
+            <article class="event-card">
+              <p class="event-card__time">
+                <i class="fas fa-clock me-1" aria-hidden="true"></i>16:00 – 19:00
+              </p>
+              <h3 class="event-card__title">Taller d'iniciació al torn</h3>
+              <p class="event-card__speaker">
+                <i class="fas fa-user me-1" aria-hidden="true"></i>
+                Maria Puig i Ferrer
+              </p>
+              <span class="event-card__type-badge badge" style="background-color: #d4a574; color: #2c1810;">Taller</span>
+            </article>
+          </div>
+        </div>
+
+        <!-- Dia 2 -->
+        <div class="programa-day">
+          <div class="programa-day__header">
+            <div class="programa-day__date">
+              Dissabte
+              <span>15</span>
+            </div>
+            <h2 class="programa-day__title">Innovació i Sostenibilitat</h2>
+          </div>
+          <div class="programa-day__events">
+            <article class="event-card">
+              <p class="event-card__time">
+                <i class="fas fa-clock me-1" aria-hidden="true"></i>10:00 – 11:30
+              </p>
+              <h3 class="event-card__title">Fusta i ànima: la fusteria com a diàleg</h3>
+              <p class="event-card__speaker">
+                <i class="fas fa-user me-1" aria-hidden="true"></i>
+                Joan Vidal Martínez
+              </p>
+              <span class="event-card__type-badge badge" style="background-color: #8b4513;">Xerrada</span>
+            </article>
+
+            <article class="event-card">
+              <p class="event-card__time">
+                <i class="fas fa-clock me-1" aria-hidden="true"></i>12:00 – 13:00
+              </p>
+              <h3 class="event-card__title">Tints naturals: colors de la terra</h3>
+              <p class="event-card__speaker">
+                <i class="fas fa-user me-1" aria-hidden="true"></i>
+                Anna Ros Guillem
+              </p>
+              <span class="event-card__type-badge badge" style="background-color: #8b4513;">Xerrada</span>
+            </article>
+
+            <article class="event-card">
+              <p class="event-card__time">
+                <i class="fas fa-clock me-1" aria-hidden="true"></i>15:00 – 18:00
+              </p>
+              <h3 class="event-card__title">Taller de teixits i tints naturals</h3>
+              <p class="event-card__speaker">
+                <i class="fas fa-user me-1" aria-hidden="true"></i>
+                Anna Ros Guillem
+              </p>
+              <span class="event-card__type-badge badge" style="background-color: #d4a574; color: #2c1810;">Taller</span>
+            </article>
+          </div>
+        </div>
+
+        <!-- Dia 3 -->
+        <div class="programa-day">
+          <div class="programa-day__header">
+            <div class="programa-day__date">
+              Diumenge
+              <span>16</span>
+            </div>
+            <h2 class="programa-day__title">Mercat, Xarxa i Cloenda</h2>
+          </div>
+          <div class="programa-day__events">
+            <article class="event-card">
+              <p class="event-card__time">
+                <i class="fas fa-clock me-1" aria-hidden="true"></i>10:00 – 11:30
+              </p>
+              <h3 class="event-card__title">Viure de l'artesania: estratègies de mercat</h3>
+              <p class="event-card__speaker">
+                <i class="fas fa-user me-1" aria-hidden="true"></i>
+                Pere Camins Roca
+              </p>
+              <span class="event-card__type-badge badge" style="background-color: #8b4513;">Xerrada</span>
+            </article>
+
+            <article class="event-card">
+              <p class="event-card__time">
+                <i class="fas fa-clock me-1" aria-hidden="true"></i>12:00 – 14:00
+              </p>
+              <h3 class="event-card__title">Exposició col·lectiva de participants</h3>
+              <p class="event-card__speaker">
+                <i class="fas fa-users me-1" aria-hidden="true"></i>
+                Tots els participants
+              </p>
+              <span class="event-card__type-badge badge" style="background-color: #7a6a5e;">Exposició</span>
+            </article>
+
+            <article class="event-card">
+              <p class="event-card__time">
+                <i class="fas fa-clock me-1" aria-hidden="true"></i>18:00 – 18:30
+              </p>
+              <h3 class="event-card__title">Acte de cloenda i lliurament de diplomes</h3>
+              <p class="event-card__speaker">
+                <i class="fas fa-user me-1" aria-hidden="true"></i>
+                Comissió Organitzadora
+              </p>
+              <span class="event-card__type-badge badge" style="background-color: #5c3d2e;">Acte</span>
+            </article>
+          </div>
+        </div>
+
+        <!--galeria d'imatges de referència -->
+        <h2 style="color: #5c3d2e; font-family: 'Playfair Display', Georgia, serif; margin-top: 3rem; margin-bottom: 1rem;">
+          <i class="fas fa-images me-2" aria-hidden="true"></i>Galeria d'edicions anteriors
+        </h2>
+        <div class="programa-gallery">
+          <div class="programa-gallery__item programa-gallery__item--large">
+            <img src="./assets/images/galeria-ceramica.jpg" alt="Taller de ceràmica" width="400" height="300" />
+          </div>
+          <div class="programa-gallery__item">
+            <img src="./assets/images/galeria-fusta.jpg" alt="Taller de fusta" width="400" height="300" />
+          </div>
+          <div class="programa-gallery__item">
+            <img src="./assets/images/galeria-teixits.jpg" alt="Teixits de colors naturals" width="400" height="300" />
+          </div>
+          <div class="programa-gallery__item">
+            <img src="./assets/images/galeria-orfebreria.jpg" alt="Taller d'orfebreria" width="400" height="300" />
+          </div>
+          <div class="programa-gallery__item">
+            <img src="./assets/images/galeria-cistelleria.jpg" alt="Taller de cistelleria" width="400" height="300" />
+          </div>
+        </div>
+
+        <!-- Bootstrap Modal trigger -->
+        <div class="text-center mt-4">
+          <button
+            type="button"
+            class="btn"
+            style="background-color: #5c3d2e; color: #fff; border-radius: 0; font-family: 'Lato', sans-serif; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.75rem 2rem;"
+            data-bs-toggle="modal"
+            data-bs-target="#inscripcioModal"
+          >
+            <i class="fas fa-ticket-alt me-2" aria-hidden="true"></i>
+            Inscriu-te als tallers
+          </button>
+        </div>
+
+        <!-- Modal d'inscripció -->
+        <div class="modal fade" id="inscripcioModal" tabindex="-1" aria-labelledby="inscripcioModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border-radius: 0; border-top: 4px solid #d4a574;">
+              <div class="modal-header" style="background-color: #fdf8f3; border-bottom: 1px solid #d4a574;">
+                <h2 class="modal-title" id="inscripcioModalLabel" style="font-family: 'Playfair Display', Georgia, serif; color: #5c3d2e; font-size: 1.3rem;">
+                  <i class="fas fa-ticket-alt me-2" aria-hidden="true"></i>Inscripció als tallers
+                </h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tanca"></button>
+              </div>
+              <div class="modal-body">
+                <p style="color: #5c3d2e; font-weight: 600;">Selecciona el taller al qual vols inscriure't:</p>
+                <div class="list-group list-group-flush">
+                  <label class="list-group-item" style="cursor: pointer;">
+                    <input class="form-check-input me-2" type="checkbox" value="ceramica" />
+                    Taller d'iniciació al torn — Divendres 14, 16–19h
+                  </label>
+                  <label class="list-group-item" style="cursor: pointer;">
+                    <input class="form-check-input me-2" type="checkbox" value="teixits" />
+                    Taller de teixits i tints naturals — Dissabte 15, 15–18h
+                  </label>
+                  <label class="list-group-item" style="cursor: pointer;">
+                    <input class="form-check-input me-2" type="checkbox" value="enquadernacio" />
+                    Taller d'enquadernació — Dissabte 15, 10–13h
+                  </label>
+                </div>
+                <div class="mt-3">
+                  <label for="email-inscripcio" style="color: #5c3d2e; font-weight: 600;">Correu electrònic:</label>
+                  <input
+                    type="email"
+                    id="email-inscripcio"
+                    class="form-control mt-1"
+                    placeholder="nom@exemple.cat"
+                    style="border-color: #d4a574; border-radius: 0;"
+                  />
+                </div>
+              </div>
+              <div class="modal-footer" style="border-top: 1px solid #d4a574;">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" style="border-radius: 0;">Cancel·la</button>
+                <button
+                  type="button"
+                  class="btn"
+                  style="background-color: #5c3d2e; color: #fff; border-radius: 0;"
+                  data-bs-dismiss="modal"
+                >
+                  Confirma la inscripció
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <include src="./views/footer.html"></include>
+
+    <script type="module" src="./assets/scripts/main.js"></script>
+  </body>
+</html>

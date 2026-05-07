@@ -1,0 +1,201 @@
+// =============================================================================
+// LAYOUT: Portada
+// =============================================================================
+
+@use "../variables" as v;
+
+@layer base {
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: v.$color-bg;
+    color: v.$color-dark;
+    font-family: v.$font-family-serif;
+    font-size: v.$font-size-base;
+    line-height: v.$line-height-base;
+    margin: 0;
+    padding: 0;
+  }
+
+  img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
+
+  a {
+    color: v.$color-primary !important;
+    transition: v.$transition-base;
+    text-decoration: none !important;
+
+    &:hover {
+      color: v.$color-accent;
+    }
+  }
+}
+
+@layer layout {
+  .poster {
+    align-items: center;
+    background-color: v.$color-light;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100svh;
+    padding: v.$spacing-lg;
+
+    @supports (display: grid) {
+      align-items: unset;
+      display: grid;
+      grid-template:
+        "header header header" auto "image  title  title" 1fr "image  desc   desc" auto "footer footer footer" auto / 1fr 2fr 1fr;
+      justify-content: unset;
+      min-height: 100svh;
+      padding: 0;
+    }
+
+    @media (max-width: v.$bp-md) {
+      @supports (display: grid) {
+        grid-template: 
+        "header" auto
+        "image"  auto
+        "title"  auto
+        "desc"   auto
+        "footer" auto
+        / 1fr;
+      }
+    }
+  }
+
+  .poster__header {
+    background-color: v.$color-dark;
+    grid-area: header;
+    padding: v.$spacing-md v.$spacing-lg;
+
+    @supports (display: grid) {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .poster__header-logo {
+    color: v.$color-secondary;
+    font-family: v.$font-family-display;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    &:hover {
+      color: v.$color-white;
+    }
+  }
+
+  .poster__header-nav {
+    display: flex;
+    gap: v.$spacing-lg;
+
+    a {
+      color: v.$color-highlight;
+      font-family: v.$font-family-sans;
+      font-size: v.$font-size-sm;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: v.$transition-base;
+
+      &:hover {
+        color: v.$color-secondary;
+      }
+    }
+  }
+
+  .poster__image-area {
+    background-color: v.$color-primary;
+    grid-area: image;
+    overflow: hidden;
+    position: relative;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      opacity: 0.7;
+      width: 100%;
+    }
+
+    &::after {
+      background: linear-gradient(135deg, v.$color-primary 0%, transparent 100%);
+      inset: 0;
+      content: "";
+      position: absolute;
+    }
+  }
+
+  .poster__title-area {
+    background-color: v.$color-secondary;
+    display: flex;
+    flex-direction: column;
+    grid-area: title;
+    justify-content: center;
+    padding: v.$spacing-xl v.$spacing-lg;
+    position: relative;
+
+    &::before {
+      background-color: v.$color-primary;
+      bottom: v.$spacing-lg;
+      content: "";
+      height: 4px;
+      left: v.$spacing-lg;
+      position: absolute;
+      width: 4rem;
+    }
+  }
+
+  .poster__event-label {
+    color: v.$color-primary;
+    font-family: v.$font-family-sans;
+    font-size: v.$font-size-sm;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-bottom: v.$spacing-md;
+    text-transform: uppercase;
+  }
+
+  .poster__title {
+    color: v.$color-dark;
+    font-family: v.$font-family-display;
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: v.$spacing-md;
+  }
+
+  .poster__subtitle {
+    color: v.$color-primary;
+    font-family: v.$font-family-serif;
+    font-size: 1.1rem;
+    font-style: italic;
+  }
+
+  .poster__desc-area {
+    background-color: v.$color-light;
+    grid-area: desc;
+    padding: v.$spacing-lg;
+
+    p {
+      color: v.$color-muted;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: v.$spacing-md;
+    }
+  }
+}

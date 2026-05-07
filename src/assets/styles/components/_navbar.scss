@@ -1,0 +1,52 @@
+// =============================================================================
+// COMPONENT: Navbar
+// =============================================================================
+
+@use "../variables" as v;
+
+@layer components {
+  .site-navbar {
+    background-color: v.$color-white;
+    border-bottom: 2px solid v.$color-secondary;
+    box-shadow: v.$shadow-sm;
+    padding: v.$spacing-sm v.$spacing-lg;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    &__brand {
+      align-items: center;
+      display: flex;
+      font-family: v.$font-family-display;
+      font-size: 1.4rem;
+      font-weight: 700;
+      gap: v.$spacing-sm;
+      text-decoration: none;
+
+      &:hover {
+        color: v.$color-accent !important;
+      }
+    }
+
+    &__logo-text {
+      color: v.$color-primary;
+      font-family: v.$font-family-display;
+    }
+
+    &__nav-link {
+      color: v.$color-primary !important;
+      font-family: v.$font-family-sans;
+      font-size: v.$font-size-sm;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: v.$transition-base;
+
+      &:hover,
+      &.active {
+        color: v.$color-accent !important;
+        text-decoration: underline !important;
+      }
+    }
+  }
+}
